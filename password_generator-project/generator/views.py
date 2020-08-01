@@ -10,9 +10,9 @@ def home(request):
 def password(request):
     
     characters = list('abcdefghijklmnopqrstuvwxyz')
-    length = 12
+    length = int(request.GET.get('length'))
     generatedPassword = ''
-    
+
     for x in range(length):
         generatedPassword += random.choice(characters)
 

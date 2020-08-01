@@ -22,7 +22,7 @@ def password(request):
     if request.GET.get('special'):
         characters.extend(list('!@#$%^&*<>,.?/;:~'))
 
-    length = int(request.GET.get('length', 12))
+    length = int(request.GET.get('password-length', 12))
     
     generatedPassword = ''
     for x in range(length):
